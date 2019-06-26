@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
 let port;
+require("./db.js")
 
 
 if(!process.env.PORT){
-     port = 4000 
+     port = 40001 
 }else{
      port = process.env.PORT
 }
