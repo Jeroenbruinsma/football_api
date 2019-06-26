@@ -10,3 +10,10 @@ const Team = db.define(
       }
     }
   )
+  Team.create({
+    name: 'shure!!',
+    }).then(team => console.log(`The team is now created. The ID = ${team.id}`))
+
+
+
+module.exports = Team
