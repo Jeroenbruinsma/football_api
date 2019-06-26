@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 let port;
 require("./db.js")
+require('./team/model')
 
 
 if(!process.env.PORT){
