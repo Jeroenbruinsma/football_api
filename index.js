@@ -9,6 +9,7 @@ require('./player/model')
 const teamRouter = require('./team/router')
 const playerRouter = require('./player/router')
 const auth = require('./auth/router')
+const login = require('./user/router')
 
 
 if(!process.env.PORT){
@@ -26,3 +27,4 @@ app.use(jsonParser)
 app.use(teamRouter)
 app.use(playerRouter)
 app.use(auth)
+app.use(login)
