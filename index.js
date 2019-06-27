@@ -5,11 +5,14 @@ const jsonParser = bodyParser.json()
 let port;
 require("./db.js")
 require('./team/model')
+require('./player/model')
 const teamRouter = require('./team/router')
+const playerRouter = require('./player/router')
+const auth = require('./auth/router')
 
 
 if(!process.env.PORT){
-     port = 40001 
+     port = 40004
 }else{
      port = process.env.PORT
 }
@@ -21,3 +24,5 @@ app.get('/', (req, res) => res.send('Helloo World!'))
 app.listen(port, () => `Listening on port ${port}`)
 app.use(jsonParser)
 app.use(teamRouter)
+app.use(playerRouter)
+app.use(auth)
